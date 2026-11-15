@@ -14,8 +14,25 @@ android {
         versionName '1.0'
     }
 
+    // Fixed key so the phone accepts the app and future updates install over it.
+    signingConfigs {
+        release {
+            storeFile file('rova-release.jks')
+            storePassword 'rovaparking'
+            keyAlias 'rova'
+            keyPassword 'rovaparking'
+            enableV1Signing true
+            enableV2Signing true
+            enableV3Signing true
+        }
+    }
+
     buildTypes {
-        debug { minifyEnabled false }
+        release {
+            minifyEnabled false
+            debuggable false
+            signingConfig signingConfigs.release
+        }
     }
 
     compileOptions {

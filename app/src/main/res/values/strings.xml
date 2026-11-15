@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">חניה ברובע</string>
+    <string name="service_label">חניה ברובע - לחיצה אוטומטית על שלח</string>
+    <string name="service_desc">בזמן שיחה למוקד החניה בלבד, השירות מחכה לפי הזמנים שהגדרת ולוחץ בשבילך על "שלח" במסך השיחה, כדי שהטלפון יקיש את הקוד, תעודת הזהות והפרטים. השירות לא פועל בשום שיחה אחרת ולא קורא תוכן אחר.</string>
+</resources>

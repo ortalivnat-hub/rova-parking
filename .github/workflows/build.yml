@@ -29,6 +29,12 @@ jobs:
       - name: Build release APK
         run: gradle :app:assembleRelease --stacktrace
 
+      - name: Verify APK (signature and manifest)
+        run: |
+          BT=$(ls -d $ANDROID_HOME/build-tools/* | sort -V | tail -1)
+          $BT/apksigner verify --verbose --print-certs app/build/outputs/apk/release/app-release.apk
+          $BT/aapt2 dump badging app/build/outputs/apk/release/app-release.apk | head -20
+
       - name: Rename APK
         run: cp app/build/outputs/apk/release/app-release.apk rova-parking.apk
 

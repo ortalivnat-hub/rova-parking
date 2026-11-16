@@ -7,11 +7,11 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId 'il.rova.parking'
+        applicationId 'il.rovaparking.dialer'
         minSdk 29
         targetSdk 34
-        versionCode 1
-        versionName '1.0'
+        versionCode 3
+        versionName '1.2'
     }
 
     // Fixed key so the phone accepts the app and future updates install over it.
